@@ -1,0 +1,117 @@
+object MainForm: TMainForm
+  Left = 256
+  Height = 492
+  Top = 145
+  Width = 1028
+  Caption = 'Клеточные автоматы'
+  ClientHeight = 492
+  ClientWidth = 1028
+  Constraints.MinHeight = 492
+  Constraints.MinWidth = 1028
+  OnClose = FormClose
+  OnResize = FormResize
+  LCLVersion = '2.0.12.0'
+  object MainPanel: TPanel
+    Left = 0
+    Height = 492
+    Top = 0
+    Width = 752
+    Align = alClient
+    ClientHeight = 492
+    ClientWidth = 752
+    TabOrder = 0
+    object Canva: TImage
+      Left = 1
+      Height = 490
+      Top = 1
+      Width = 750
+      Align = alClient
+      Stretch = True
+    end
+  end
+  object SettingsPanel: TPanel
+    Left = 752
+    Height = 492
+    Top = 0
+    Width = 276
+    Align = alRight
+    ClientHeight = 492
+    ClientWidth = 276
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 8
+      Height = 15
+      Top = 8
+      Width = 52
+      Caption = 'Скорость'
+      ParentColor = False
+    end
+    object TrackBar1: TTrackBar
+      Left = 8
+      Height = 25
+      Top = 32
+      Width = 256
+      Max = 150
+      Min = 1
+      OnChange = TrackBar1Change
+      Position = 16
+      TabOrder = 0
+    end
+    object Label2: TLabel
+      Left = 72
+      Height = 15
+      Top = 8
+      Width = 12
+      Caption = '16'
+      ParentColor = False
+    end
+    object Label3: TLabel
+      Left = 8
+      Height = 15
+      Top = 64
+      Width = 49
+      Caption = 'Правило'
+      ParentColor = False
+    end
+    object SpinEdit1: TSpinEdit
+      Left = 8
+      Height = 23
+      Top = 88
+      Width = 50
+      MaxValue = 255
+      OnChange = SpinEdit1Change
+      TabOrder = 1
+      Value = 30
+    end
+    object RuleImage: TImage
+      Left = 8
+      Height = 254
+      Top = 120
+      Width = 34
+    end
+    object Button1: TButton
+      Left = 189
+      Height = 25
+      Top = 72
+      Width = 75
+      Caption = 'Повтор'
+      OnClick = Button1Click
+      TabOrder = 2
+    end
+    object Button2: TButton
+      Left = 189
+      Height = 25
+      Top = 104
+      Width = 75
+      Caption = 'Пауза'
+      OnClick = Button2Click
+      TabOrder = 3
+    end
+  end
+  object Timer1: TTimer
+    Interval = 16
+    OnTimer = Timer1Timer
+    Left = 984
+    Top = 8
+  end
+end
